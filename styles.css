@@ -509,8 +509,117 @@ header .container {
     }
 }
 
+/* PAGE 3 STARTS HERE */
+
+#page-3 {
+
+    background: rgb(146,148,153);
+    background: linear-gradient(0deg, rgba(146,148,153,1) 0%, rgba(243,246,255,1) 100%);
 
 
+    .container {
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .p3-headline {
+        grid-area: p3-headline;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .img-phones-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        #left-phone {
+            display: none;
+        }
+        #right-phone {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+
+            gap: 0.3rem;
+
+            img {
+                width: 15rem;
+            }
+
+            #left-phone {
+                display: block;
+            }
+            #right-phone {
+                display: block;
+            }
+
+        }
+        @media (min-width: 1400px) {
+            gap: 6rem;
+
+            img {
+                width: 20rem;
+            }
+
+        }
+    }
+
+    .end-text {
+        text-align: center;
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+
+        h4 {
+            padding-bottom: 1.5rem;
+            font-size: 21.6px;
+            font-weight: bolder;
+        }
+
+        p {
+            color: #585C7B;
+        }
+
+        .text-mobile {
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .text-tablet {
+            display: none;
+
+            @media (min-width: 768px) {
+                display: block;
+            }
+            @media (min-width: 1400px) {
+                display: none;
+            }
+
+        }
+
+        .text-desktop {
+            display: none;
+
+            @media (min-width: 1400px) {
+                display: block;
+            }
+        }
+    }
+}
+
+/* PAGE 3 STOPS HERE */
 
 
 @media (min-width: 768px) {
