@@ -754,8 +754,97 @@ header .container {
 
 /* DESKTOP ONLY PAGE 1 ENDS HERE */
 
+/* DESKTOP ONLY PAGE 2 STARTS HERE */
+
+#desktop-only-2 {
+
+    background-color: #F3F6FF;
+    display: none;
+
+    @media (min-width: 1400px) {
+        display: block;
+    }
+
+    .container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        display: flex;
+
+    }
+
+    .p5-headline-container {
+
+        margin-right: 8rem;
+
+        h4 {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: start;
+        gap: 1.5rem;
+        margin-left: 2rem;
+        padding-top: 1.5rem;
+        
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 8px;
+        padding-left: 1.5rem;
+        padding-bottom: .5rem;
+
+        width: 25rem;
+
+        box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+
+    }
+
+    .card-icon {
+        position: relative;
+        top: -27px;
+    }
+
+    .card-rating-icon {
+        padding-bottom: 1rem;
+    }
+
+    .card-text {
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .avatar-text-container {
+        display: flex;
+        text-align: start;
+        gap: 1rem;
+
+        h5 {
+            font-weight: bolder;
+            padding-top: .3rem;
+            padding-bottom: .2rem;
+        }
+
+        p {
+            color: #9397AD;
+            font-size: 14px;
+        }
+    }
 
 
+}
+
+/* DESKTOP ONLY PAGE 2 STOPS HERE */
 
 @media (min-width: 768px) {
     .container {
