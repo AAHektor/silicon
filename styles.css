@@ -862,7 +862,7 @@ header .container {
         text-align: center;
 
         h2 {
-            font-size: 32px;
+            font-size: 24.7px;
             color: #0B0F19;
         }
 
@@ -932,7 +932,7 @@ header .container {
 
     
 
-    .dropdown {
+    /* .dropdown {
         width: 100%;
         max-width: 600px;
         background-color: #fff;
@@ -968,7 +968,74 @@ header .container {
         content: "▼";
         float: right;
         font-size: 1.5rem;
+    } */
+
+    .accordion-container {
     }
+
+    #accordion {
+
+        li {
+            list-style: none;
+            width: 100%;
+        }
+
+        p {
+            border: 1px solid #E2E5F1;
+            padding: 1em;
+            border-width: 1px 1px 0px 1px;
+        }
+
+        img {
+            background-color: #F3F6FF;
+            border-radius: 50%;
+        }
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+
+            border: 1px solid #E2E5F1;
+            border-width: 1px 1px 0 1px;
+            padding: 1em;
+        }
+
+        .upper-accordion {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .bottom-accordion {
+            border-width: 1px 1px 1px 1px;
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        label + input[type="radio"] {
+            display: none;
+        }
+
+        .content {
+            line-height: 26px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        .bottom-p {
+            border: 1px solid #E2E5F1;
+        }
+
+        label + input[type="radio"]:checked + .content {
+            max-height: 400px;
+        }
+
+
+
+    }
+
 
     .btn-contact {
         padding: 1rem 2rem;
@@ -976,7 +1043,9 @@ header .container {
         border: none;
         background-color: var(--clr-primary);
         color: white;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
     }
 
     .button-container {
@@ -987,27 +1056,69 @@ header .container {
     }
 
     .newsletter-container {
+        display: flex;
+        flex-direction: column;
+
         background-color: #F3F6FF;
         margin-bottom: 2rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        padding-left: .5rem;
-        padding-right: 1rem;
         border-radius: 8px;
         
     }
 
     .bell-text-container {
         display: flex;
-        justify-content: start;
+        justify-content: center;
         gap: 1rem;
-        padding-left: 1rem;
         padding-bottom: 2rem;
+        padding-right: 3rem;
         
 
         h4 {
             font-size: 21.6px;
         }
+    }
+
+    .input-group {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .form-input {
+            border-radius: .5em 0 0 .5em;
+        }
+
+        .btn-subscribe {
+            border-radius: 0 .5em .5em 0;
+        }
+    }
+
+    .icon-envelope {
+        position: absolute;
+        top: 30%;
+        
+        transform: translateX(-650%);
+
+    }
+
+    .form-input {
+        display: flex;
+        padding-left: 3rem;
+        font-size: 16px;
+        color: #B4B7C9;
+        border: 1px solid #D4D7E5;
+
+        width: 13rem;
+
+    }
+
+    .btn-subscribe {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+        padding: 1rem 1rem;
+        border: none;
+        font-size: 16px;
     }
 }
 
