@@ -863,12 +863,26 @@ header .container {
 
         h2 {
             font-size: 24.7px;
+            font-weight: 800;
             color: #0B0F19;
         }
 
+        
+    }
+
+    .p-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         p {
-            color: #565973;
+            color: #585C7B;
             margin-bottom: 1rem;
+            max-width: 310px;
+
+            @media (min-width: 768px) {
+                max-width: 370px;
+            }
         }
     }
 
@@ -937,35 +951,40 @@ header .container {
         grid-area: accordion;
 
         @media (min-width: 768px) {
-            
+
+        }
+
+        .rotated-image-2 {
+            display: none;
         }
 
         .img-span-container {
             display: flex; 
             justify-content: center;
+            align-items: center;
             overflow: hidden; 
             cursor: pointer; 
+            margin-left: 1rem;
     
             background-color: #F3F6FF;
             border-radius: 50%;
             width: 36px;
             height: 36px;
-    
-            img {
-                color: #3E4265;
-            }
         }
-        
-        .rotated-image {
-            display: block; 
-            transition: transform 0.5s; 
-    
-            width: 23px;
-            height: auto;
+
+        .fa-chevron-down {
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 12px;
+            
         }
-        
-        input[type="radio"]:checked + label .rotated-image {
+        input[type="radio"]:checked + label .img-span-container .fa-chevron-down {
             transform: rotate(180deg);
+            color: white;
+        }
+        input[type="radio"]:checked + label .img-span-container {
+            -webkit-box-shadow: 0px -8px 18px -8px rgba(99,102,241,0.9);
+            -moz-box-shadow: 0px -8px 18px -8px rgba(99,102,241,0.9);
+            box-shadow: 0px -8px 18px -8px rgba(99,102,241,0.9)
         }
         
         
@@ -1034,6 +1053,10 @@ header .container {
         input[type="radio"]:checked + .accordion-header.bottom-label {
             border-radius: 0 0 0 0;
         }
+        input[type="radio"]:checked + label .img-span-container {
+            background-color: #6366F1;
+        }
+        
     }
 
     /* ACCORDION ENDS HERE */
