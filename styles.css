@@ -930,67 +930,63 @@ header .container {
         
     }
 
-    
-
-    /* .dropdown {
-        width: 100%;
-        max-width: 600px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        margin: 10px auto;
-    }
-
-    .dropdown-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px;
-        background-color: #f9f9f9;
-        border-bottom: 1px solid #ddd;
-        font-size: 1.1rem;
-        cursor: pointer;
-    }
-      
-    .dropdown-content {
-        padding: 16px;
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-      
-    details[open] .dropdown-header::after {
-        content: "▲";
-        float: right;
-    }
-      
-    .dropdown-header::after {
-        content: "▼";
-        float: right;
-        font-size: 1.5rem;
-    } */
-
-    .accordion-container {
-    }
-
+    /* Tagit hjälp av ChatGPT med Accordion nedan*/
     #accordion {
+        width: 100%;
 
-        li {
-            list-style: none;
-            width: 100%;
+        grid-area: accordion;
+
+        @media (min-width: 768px) {
+            
         }
 
-        p {
-            border: 1px solid #E2E5F1;
-            padding: 1em;
-            border-width: 1px 1px 0px 1px;
-        }
-
-        img {
+        .img-span-container {
+            display: flex; 
+            justify-content: center;
+            overflow: hidden; 
+            cursor: pointer; 
+    
             background-color: #F3F6FF;
             border-radius: 50%;
+            width: 36px;
+            height: 36px;
+    
+            img {
+                color: #3E4265;
+            }
         }
-
+        
+        .rotated-image {
+            display: block; 
+            transition: transform 0.5s; 
+    
+            width: 23px;
+            height: auto;
+        }
+        
+        input[type="radio"]:checked + label .rotated-image {
+            transform: rotate(180deg);
+        }
+        
+        
+        .accordion-container {
+            margin-bottom: 0;
+    
+            &.bottom-accordion label {
+                border-top: none;
+                border-radius: 0 0 8px 8px;
+            }
+    
+            &.middle-accordion label {
+                border-top: none;
+                border-bottom: 1px solid #E2E5F1; 
+            }
+    
+            &.top-accordion label {
+                border-radius: 8px 8px 0 0;
+            }
+        }
+        
         label {
             display: flex;
             justify-content: space-between;
@@ -998,43 +994,51 @@ header .container {
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-
-            border: 1px solid #E2E5F1;
-            border-width: 1px 1px 0 1px;
             padding: 1em;
+            background-color: white;
+            border: 1px solid #E2E5F1;
+            transition: border-radius 0.3s ease;
+    
+            
         }
-
-        .upper-accordion {
-            border-radius: 8px 8px 0 0;
-        }
-
-        .bottom-accordion {
-            border-width: 1px 1px 1px 1px;
-            border-radius: 0px 0px 8px 8px;
-        }
-
-        label + input[type="radio"] {
+        
+        input[type="radio"] {
             display: none;
         }
-
+        
         .content {
-            line-height: 26px;
             max-height: 0;
+            opacity: 0;
+            visibility: hidden;
             overflow: hidden;
-            transition: max-height 0.5s;
+            transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.2s;
+            border: none;
+            border-top: none;
+            padding: 0 1em;
+            box-sizing: border-box;
+            
         }
-
-        .bottom-p {
-            border: 1px solid #E2E5F1;
+        
+        input[type="radio"]:checked + label + .content {
+    
+            max-height: 500px; 
+            border: 1px solid #E2E5F1; 
+            border-top: none; 
+            opacity: 1;
+            visibility: visible;
+            transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0s 0s;
+            padding: 1em;
         }
-
-        label + input[type="radio"]:checked + .content {
-            max-height: 400px;
+        
+    
+        input[type="radio"]:checked + .accordion-header.bottom-label {
+            border-radius: 0 0 0 0;
         }
-
-
-
     }
+
+    /* ACCORDION ENDS HERE */
+
+    
 
 
     .btn-contact {
