@@ -1,13 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-    --clr-primary: #6366F1; 
-    --clr-white: white;
 
+    /* Navbar bg */
+    --clr-navbar: #ffff;
+    --clr-p: #ffff;
+
+    /* Page backgrounds */
+    --clr-page1-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 50%, rgba(241,244,253,0.07) 100%);
+
+    /* Gray scale */
+    --clr-gray100: #F3F6FF;
+    --clr-gray200: #EFF2FC;
+    --clr-gray300: #E2E5F1;
+    --clr-gray400: #D4D7E5;
+    --clr-gray500: #B4B7C9;
+    --clr-gray600: #9397AD;
+    --clr-gray700: #565973;
+    --clr-gray800: #33354D;
+    --clr-gray900: #0B0F19;
+    
+    /* brand clr */
+    --clr-primary: #6366F1; 
+
+    /* other */
+    --clr-gray200-secondary: #EFF2FC;
+    --clr-white: white;
     --clr-gray-borderbox: #E2E5F1;
+
+    --clr-logo: black;
+    --clr-p: black;
+    --clr-p-brands: var(--clr-gray700);
+
+    --clr-brands-bg: hwb(239 39% 5% / 0.080);
 
     --container-padding: 1rem;
     --transition-time: all 0.2s;
+}
+
+html {
+    color-scheme: light;
+}
+
+.dark {
+    background-color: #0b0f19;
+
+    /* Navbar bg */
+    --clr-navbar: rgba(241,244,253,0.07);
+
+    /* Page backgrounds */
+    --clr-page1-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 42%, rgba(241,244,253,0.07) 83%);
+
+
+    --clr-gray100: #F3F6FF;
+    --clr-gray200: #EFF2FC;
+    --clr-gray300: #E2E5F1;
+    --clr-gray400: #D4D7E5;
+    --clr-gray500: #B4B7C9;
+    --clr-gray600: #9397AD;
+    --clr-gray700: #565973;
+    --clr-gray800: #33354D;
+    --clr-gray900: #0B0F19;
+    
+    /* brand clr */
+    --clr-primary: #6366F1; 
+
+    /* other */
+    --clr-gray200-secondary: #EFF2FC;
+    --clr-white: #0B0F19;
+    --clr-gray-borderbox: #e2e5f136;
+
+    --clr-logo: #ffff;
+    --clr-p: #ffff;
+    --clr-p-brands: #ffffff7a;
+
 }
 
 * {
@@ -159,6 +225,11 @@ input:checked + .slider:before {
     display: none;
 }
 
+#header {
+    background: var(--clr-navbar);
+
+}
+
 header .container {
     display: grid;
     align-items: center;
@@ -166,6 +237,10 @@ header .container {
     gap: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+#logo {
+    fill: var(--clr-logo);
 }
 
 /* Header stops here */
@@ -192,9 +267,8 @@ header .container {
 }
 
 #hero {
+    background: var(--clr-page1-gradient);
 
-    background: rgb(99,102,241);
-    background: linear-gradient(0deg, rgba(99,102,241,0.09913963607594933) 0%, rgba(218,70,239,0.04850672468354433) 42%, rgba(241,244,253,0.07065862341772156) 83%);
     padding-bottom: 2rem;
     
     overflow: hidden;
@@ -206,7 +280,7 @@ header .container {
     }
 
     @media (min-width: 1400px) {
-        margin-top: 5rem;
+        padding-top: 5rem;
     }
 
     .container {
@@ -351,6 +425,8 @@ header .container {
 
 #hero-2 {
 
+    background-color: var(--clr-white);
+
     .container {
         padding-left: var(--container-padding);
         padding-right: var(--container-padding);
@@ -437,10 +513,11 @@ header .container {
         h2 {
             font-size: 36.21px;
             font-weight: bolder;
+            color: var(--clr-logo);
         }
 
         p {
-            color: #585C7B;
+            color: var(--clr-p-brands);
         }
 
         @media (min-width: 768px) {
@@ -448,6 +525,7 @@ header .container {
         }
         @media (min-width: 1400px) {
             margin-top: 4rem;
+            text-align: start;
         }
     }
 
@@ -475,11 +553,12 @@ header .container {
         h3 {
             font-size: 20px;
             font-weight: bolder;
+            color: var(--clr-p);
         }
 
         p {
             font-size: 16px;
-            color: #585C7B;
+            color: var(--clr-p-brands);
         }
         
 
@@ -487,7 +566,7 @@ header .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #F3F6FF;
+            background-color: var(--clr-brands-bg);
             border-radius: 8px;
             padding: 30px;
             width: 60px;
@@ -502,8 +581,10 @@ header .container {
             margin-bottom: 1.5rem;
             width: 100%;
             
-
+            
         }
+
+        
         
 
     }
