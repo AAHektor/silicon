@@ -174,8 +174,12 @@
                 </div>
                 <div class="img-phones-container">
                     <img id="left-phone" src="images/images-page-3/iPhone 12 Pro-2.svg" alt="">
-                    <img src="images/images-page-3/iPhone 12 Pro-1.svg" alt="">
+                    <img id="mid-phone" src="images/images-page-3/iPhone 12 Pro-1.svg" alt="">
                     <img id="right-phone" src="images/images-page-3/iPhone 12 Pro.svg" alt="">
+
+                    <img id="tablet-left" src="images/images-page-3/tablet-left.svg" alt="">
+                    <img id="tablet-mid" src="images/images-page-3/tablet-mid.svg" alt="">
+                    <img id="tablet-right" src="images/images-page-3/tablet-right.svg" alt="">
                 </div>
                 <div class="end-text">
 
@@ -316,131 +320,136 @@
 
         <section id="page-4">
             <div class="container">
-                <div class="p4-headline-container">
-                    <div>
-                        <h2>Any questions? <br> Check out the FAQs</h2>
+                <div class="faq-container">
+                    <div class="p4-headline-container">
+                        <div>
+                            <h2>Any questions? <br> Check out the FAQs</h2>
+                        </div>
+                        <div class="p-div">
+                            <p>Still have unanswered questions and need to get in touch?</p>
+                        </div>
                     </div>
-                    <div class="p-div">
-                        <p>Still have unanswered questions and need to get in touch?</p>
-                    </div>
-                </div>
-                <div class="contact-container">
-                    <div class="contact-card">
-                        <img src="images/images-last/Group (2).svg" alt="">
-                        <p>Still have questions?</p>
-                        <button class="button-card btn-card-1">Contact us<img src="images/images-last/Vectorblue.svg" alt=""></button>
-                    </div>
-                    <div class="contact-card">
-                        <img src="images/images-last/icon (1).svg" alt="">
-                        <p>Don't like phone calls?</p>
-                        <button class="button-card btn-card-2">Contact us<img src="images/images-last/Vectorgreen.svg" alt=""></button>
+                    <div class="contact-container">
+                        <div class="contact-card">
+                            <img src="images/images-last/Group (2).svg" alt="">
+                            <p>Still have questions?</p>
+                            <button class="button-card btn-card-1">Contact us<img src="images/images-last/Vectorblue.svg" alt=""></button>
+                        </div>
+                        <div class="contact-card">
+                            <img src="images/images-last/icon (1).svg" alt="">
+                            <p>Don't like phone calls?</p>
+                            <button class="button-card btn-card-2">Contact us<img src="images/images-last/Vectorgreen.svg" alt=""></button>
+                        </div>
                     </div>
                 </div>
 
                 <div id="accordion">
-                    <div class="accordion-container top-accordion">
-                      <input type="radio" name="accordion" id="first">
-                      <label class="accordion-header top-label" for="first">
-                        Is any of my personal information stored in the App?
-                        <div>
-                            <span class="img-span-container">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
-                        </div>
-                      </label>
-                      <div class="content">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                            ullamcorper. Viverra aliquam arcu, viverra et,
-                            cursus. Aliquet pretium cursus adipiscing gravida
-                            et consequat lobortis arcu velit. Nibh pharetra
-                            fermentum duis accumsan lectus non. Massa
-                            cursus molestie lorem scelerisque pellentesque.
-                            Nisi, enim, arcu purus gravida adipiscing euismod
-                            montes, duis egestas. Vehicula eu etiam quam
-                            tristique tincidunt suspendisse ut consequat.
-                        <br> <br>
-                        Ornare senectus fusce dignissim ut. Integer
-                        consequat in eu tortor, faucibus et lacinia
-                        posuere. Turpis sit viverra lorem suspendisse
-                        lacus aliquam auctor vulputate. Quis egestas
-                        aliquam nunc purus lacus, elit leo elit facilisi.
-                        Dignissim amet adipiscing massa integer.</p>
-                      </div>
-                    </div>
-                  
-                    <div class="accordion-container middle-accordion">
-                      <input type="radio" name="accordion" id="second">
-                      <label class="accordion-header" for="second">
-                        What formats can I download my transaction history in?
-                        <div>
-                            <span class="img-span-container">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
-                        </div>
-                      </label>
-                      <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
-                      </div>
-                    </div>
+                    <div class="accordion-wrapper">
 
-                    <div class="accordion-container middle-accordion">
-                      <input type="radio" name="accordion" id="third">
-                      <label class="accordion-header" for="third">
-                        Can I schedule future transfers?
-                        <div>
-                            <span class="img-span-container">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
+                        <div class="accordion-container top-accordion">
+                          <input type="radio" name="accordion" id="first">
+                          <label class="accordion-header top-label" for="first">
+                            Is any of my personal information stored in the App?
+                            <div>
+                                <span class="img-span-container">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                          </label>
+                          <div class="content">
+                            <p>Nunc duis id aenean gravida tincidunt eu, tempor
+                                ullamcorper. Viverra aliquam arcu, viverra et,
+                                cursus. Aliquet pretium cursus adipiscing gravida
+                                et consequat lobortis arcu velit. Nibh pharetra
+                                fermentum duis accumsan lectus non. Massa
+                                cursus molestie lorem scelerisque pellentesque.
+                                Nisi, enim, arcu purus gravida adipiscing euismod
+                                montes, duis egestas. Vehicula eu etiam quam
+                                tristique tincidunt suspendisse ut consequat.
+                            <br> <br>
+                            Ornare senectus fusce dignissim ut. Integer
+                            consequat in eu tortor, faucibus et lacinia
+                            posuere. Turpis sit viverra lorem suspendisse
+                            lacus aliquam auctor vulputate. Quis egestas
+                            aliquam nunc purus lacus, elit leo elit facilisi.
+                            Dignissim amet adipiscing massa integer.</p>
+                          </div>
                         </div>
-                      </label>
-                      <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
-                      </div>
-                    </div>
-
-                    <div class="accordion-container middle-accordion">
-                      <input type="radio" name="accordion" id="forth">
-                      <label class="accordion-header" for="forth">
-                        When can I use Banking App services?
-                        <div>
-                            <span class="img-span-container">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
+                      
+                        <div class="accordion-container middle-accordion">
+                          <input type="radio" name="accordion" id="second">
+                          <label class="accordion-header" for="second">
+                            What formats can I download my transaction history in?
+                            <div>
+                                <span class="img-span-container">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                          </label>
+                          <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
+                          </div>
                         </div>
-                      </label>
-                      <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
-                      </div>
-                    </div>
-
-                    <div class="accordion-container middle-accordion">
-                      <input type="radio" name="accordion" id="fifth">
-                      <label class="accordion-header" for="fifth">
-                        Can I create my own password that is easy for me to remember?
-                        <div>
-                            <span class="img-span-container">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
+    
+                        <div class="accordion-container middle-accordion">
+                          <input type="radio" name="accordion" id="third">
+                          <label class="accordion-header" for="third">
+                            Can I schedule future transfers?
+                            <div>
+                                <span class="img-span-container">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                          </label>
+                          <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
+                          </div>
                         </div>
-                      </label>
-                      <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
-                      </div>
-                    </div>
-
-                    <div class="accordion-container bottom-accordion">
-                      <input type="radio" name="accordion" id="sixth">
-                      <label class="accordion-header bottom-label" for="sixth">
-                        What happens if I forget or lose my password?
-                        <div>
-                            <span class="img-span-container">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
+    
+                        <div class="accordion-container middle-accordion">
+                          <input type="radio" name="accordion" id="forth">
+                          <label class="accordion-header" for="forth">
+                            When can I use Banking App services?
+                            <div>
+                                <span class="img-span-container">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                          </label>
+                          <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
+                          </div>
                         </div>
-                      </label>
-                      <div class="content bottom-accordion">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
-                      </div>
+    
+                        <div class="accordion-container middle-accordion">
+                          <input type="radio" name="accordion" id="fifth">
+                          <label class="accordion-header" for="fifth">
+                            Can I create my own password that is easy for me to remember?
+                            <div>
+                                <span class="img-span-container">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                          </label>
+                          <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
+                          </div>
+                        </div>
+    
+                        <div class="accordion-container bottom-accordion">
+                          <input type="radio" name="accordion" id="sixth">
+                          <label class="accordion-header bottom-label" for="sixth">
+                            What happens if I forget or lose my password?
+                            <div>
+                                <span class="img-span-container">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                          </label>
+                          <div class="content bottom-accordion">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum explicabo tempore distinctio quaerat necessitatibus excepturi...</p>
+                          </div>
+                        </div>
                     </div>
                 </div>
                   

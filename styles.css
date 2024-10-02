@@ -626,9 +626,29 @@ header .container {
         #left-phone {
             display: none;
         }
+
+        #mid-phone {
+            display: none;
+        }
+
         #right-phone {
             display: none;
         }
+
+        #tablet-left {
+            display: none;
+        }
+
+        #tablet-right {
+            display: none;
+        }
+
+        img {
+            width: 17rem;
+            height: auto;
+        }
+
+
 
         @media (min-width: 768px) {
 
@@ -638,12 +658,15 @@ header .container {
                 width: 15rem;
             }
 
-            #left-phone {
+            #tablet-left {
                 display: block;
             }
-            #right-phone {
+
+            #tablet-right {
                 display: block;
             }
+
+            
 
         }
         @media (min-width: 1400px) {
@@ -651,6 +674,30 @@ header .container {
 
             img {
                 width: 20rem;
+            }
+
+            #tablet-left {
+                display: none;
+            }
+
+            #tablet-mid {
+                display: none;
+            }
+
+            #tablet-right {
+                display: none;
+            }
+
+            #left-phone {
+                display: block;
+            }
+    
+            #mid-phone {
+                display: block;
+            }
+    
+            #right-phone {
+                display: block;
             }
 
         }
@@ -1078,6 +1125,11 @@ header .container {
         
     }
 
+    .faq-container .accordion-wrapper {
+        grid-area: span 1;
+    }
+
+
     /* Tagit hjälp av ChatGPT med Accordion nedan*/
     #accordion {
         width: 100%;
@@ -1090,6 +1142,10 @@ header .container {
 
         .rotated-image-2 {
             display: none;
+        }
+
+        .accordion-wrapper {
+            overflow: visible;
         }
 
         .img-span-container {
