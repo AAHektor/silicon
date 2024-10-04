@@ -71,6 +71,11 @@
     --clr-form-input-border: 1px solid #D4D7E5;
 
     --clr-envelope: #B4B7C9;
+
+    --clr-discover: rgb(33, 33, 54);
+
+    --clr-dropdown-menu: #ffff;
+    
 }
 
 html {
@@ -138,6 +143,12 @@ html {
     --clr-form-input-border: 1px solid #d4d7e562;
 
     --clr-envelope: #b4b7c97a;
+
+    --hamburger-menu: #ffff;
+
+    --clr-discover: rgb(184, 185, 192);
+
+    --clr-dropdown-menu: rgb(34, 33, 53);
 
 }
 
@@ -267,7 +278,7 @@ a {
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: var(--clr-primary);
 }
 
 input:focus + .slider {
@@ -437,6 +448,7 @@ header .container {
             text-align: left;
         }
 
+
         p {
             font-size: 18px;
             margin-top: 1rem;
@@ -479,12 +491,26 @@ header .container {
             }
         }
 
+        .btn-circle {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            span {
+                color: var(--clr-discover);
+            }
+        }
+
         .btn-dropdown {
-            background-color: white;
+            background-color: var(--clr-dropdown-menu);
             border: none;
             border-radius: 50%;
             width: 40px;
             height: 40px;
+
+            svg {
+                color: var(--clr-chevron);
+            }
         }
 
     }
