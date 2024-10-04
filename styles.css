@@ -63,6 +63,14 @@
     --clr-accordion-drop: var(--clr-gray100);
 
     --clr-chevron: "";
+
+    --clr-newsletter: var(--clr-gray100);
+
+    --clr-newsletter-input: "";
+
+    --clr-form-input-border: 1px solid #D4D7E5;
+
+    --clr-envelope: #B4B7C9;
 }
 
 html {
@@ -122,6 +130,14 @@ html {
     --clr-accordion-drop: rgb(30, 33, 43);
 
     --clr-chevron: #ffff;
+
+    --clr-newsletter: rgb(21, 24, 34);
+
+    --clr-newsletter-input: rgb(25, 29, 39);
+
+    --clr-form-input-border: 1px solid #d4d7e562;
+
+    --clr-envelope: #b4b7c97a;
 
 }
 
@@ -1087,6 +1103,8 @@ header .container {
             font-weight: bolder;
             padding-top: .3rem;
             padding-bottom: .2rem;
+
+            color: var(--clr-title);
         }
 
         p {
@@ -1487,7 +1505,7 @@ header .container {
         display: flex;
         flex-direction: column;
 
-        background-color: var(--clr-gray100);
+        background-color: var(--clr-newsletter);
         margin-bottom: 2rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -1516,6 +1534,7 @@ header .container {
 
         h4 {
             font-size: 21.6px;
+            color: var(--clr-title);
         }
 
         @media (min-width: 768px) {
@@ -1532,6 +1551,8 @@ header .container {
         justify-content: center;
         position: relative;
 
+        
+
         .form-input {
             border-radius: .5em 0 0 .5em;
         }
@@ -1542,6 +1563,8 @@ header .container {
     }
 
     .icon-envelope {
+
+        color: var(--clr-envelope);
         position: absolute;
         top: 30%;
         
@@ -1554,7 +1577,8 @@ header .container {
         padding-left: 3rem;
         font-size: 16px;
         color: #B4B7C9;
-        border: 1px solid #D4D7E5;
+        border: var(--clr-form-input-border);
+        background-color: var(--clr-newsletter-input);
 
         width: 13rem;
 
@@ -1567,11 +1591,13 @@ header .container {
     
 
     .btn-subscribe {
+        font-weight: 550;
+        font-size: 16px;
+
         background-color: var(--clr-primary);
-        color: var(--clr-white);
+        color: #fff;
         padding: 1rem 1rem;
         border: none;
-        font-size: 16px;
         cursor: pointer;
 
     }
