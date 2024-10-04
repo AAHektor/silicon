@@ -10,6 +10,7 @@
     --clr-page1-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 50%, rgba(241,244,253,0.07) 100%);
     --clr-page3-gradient: linear-gradient(0deg, rgba(146,148,153,1) 0%, rgba(243,246,255,1) 100%);
     --desktop-page2-bg: var(--clr-gray100);
+    --clr-page3: var(--clr-gray100);
 
     /* Gray scale */
     --clr-gray100: #F3F6FF;
@@ -92,6 +93,7 @@ html {
     --clr-page1-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 42%, rgba(241,244,253,0.07) 83%);
     --clr-page3-gradient: rgb(21, 24, 34);
     --desktop-page2-bg: rgb(21, 24, 34);
+    --clr-page3: rgb(21, 24, 34);
 
     --clr-gray100: #F3F6FF;
     --clr-gray200: #EFF2FC;
@@ -735,17 +737,7 @@ header .container {
 
 #page-3 {
 
-    background-color: rgb(146,148,153);
-    background-color: linear-gradient(0deg, rgba(146,148,153,1) 0%, rgba(243,246,255,1) 100%);
-
-    @media (min-width: 768px) {
-        background-color: var(--clr-gray100);
-    }
-    @media (min-width: 1400px) {
-        background-color: var(--clr-page3-gradient);
-
-    }
-
+    background-color: var(--clr-page3);
 
     .container {
         padding-left: var(--container-padding);
@@ -870,6 +862,8 @@ header .container {
         }
 
         .text-mobile {
+            display: inline-block;
+            max-width: 370px;
 
             @media (min-width: 768px) {
                 display: none;
@@ -880,8 +874,11 @@ header .container {
             display: none;
 
             @media (min-width: 768px) {
-                display: block;
+                display: inline-block;
+                max-width: 450px;
+
             }
+
             @media (min-width: 1400px) {
                 display: none;
             }
@@ -1155,8 +1152,8 @@ header .container {
         
         @media (min-width: 768px) {
             display: grid;
-
-            grid-template-areas: "headline"
+            grid-template-areas: 
+                                "headline"
                                 "accordion"
                                 "contact"
                                 "newsletter";
