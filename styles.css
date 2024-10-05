@@ -67,7 +67,7 @@
 
     --clr-newsletter: var(--clr-gray100);
 
-    --clr-newsletter-input: "";
+    --clr-newsletter-input: #ffff;
 
     --clr-form-input-border: 1px solid #D4D7E5;
 
@@ -76,6 +76,8 @@
     --clr-discover: rgb(33, 33, 54);
 
     --clr-dropdown-menu: #ffff;
+
+    --clr-auth: #ffff;
     
 }
 
@@ -152,6 +154,7 @@ html {
 
     --clr-dropdown-menu: rgb(34, 33, 53);
 
+    --clr-auth: #ffff;
 }
 
 * {
@@ -323,6 +326,10 @@ input:checked + .slider:before {
 
 #auth-signin {
     display: none;
+
+    span {
+        color: var(--clr-auth);
+    }
 }
 
 #header {
@@ -1161,8 +1168,10 @@ header .container {
         @media (min-width: 1400px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: 160px min-content 1fr;
             grid-template-areas: "headline accordion"
                                 "contact accordion"
+                                "empty accordion"
                                 "newsletter newsletter";
 
         padding-top: 6rem;
@@ -1294,17 +1303,18 @@ header .container {
         
     }
 
-    .faq-container .accordion-wrapper {
-        grid-area: span 1;
-    }
+    .empty {
+        grid-area: empty;
+      }
 
 
-    /* Tagit hjälp av ChatGPT med Accordion nedan*/
-    /* Tagit hjälp av youtube också med Accordion nedan*/
+    /* Tagit delvis hjälp av chatgpt & youtube med accordion */
     #accordion {
         width: 100%;
 
         grid-area: accordion;
+        align-self: start;
+        overflow: visible; 
 
         @media (min-width: 768px) {
 
@@ -1543,6 +1553,7 @@ header .container {
 
         @media (min-width: 1400px) {
             margin-top: 5rem;
+            gap: 2rem;
         }
         
     }
@@ -1569,12 +1580,24 @@ header .container {
         }
     }
 
+    .newsletter-text2 {
+        display: none;
+
+        @media (min-width: 1400px) {
+            display: block;
+        }
+    }
+    .newsletter-text1 {
+
+        @media (min-width: 1400px) {
+            display: none;
+        }
+    }
+
     .input-group {
         display: flex;
         justify-content: center;
         position: relative;
-
-        
 
         .form-input {
             border-radius: .5em 0 0 .5em;
@@ -1583,6 +1606,8 @@ header .container {
         .btn-subscribe {
             border-radius: 0 .5em .5em 0;
         }
+
+        
     }
 
     .icon-envelope {
@@ -1592,6 +1617,10 @@ header .container {
         top: 30%;
         
         transform: translateX(-650%);
+
+        @media (min-width: 1400px) {
+            transform: translateX(-820%);
+        }
 
     }
 
@@ -1604,6 +1633,11 @@ header .container {
         background-color: var(--clr-newsletter-input);
 
         width: 13rem;
+
+        @media (min-width: 1400px) {
+            width: 17rem;
+            padding-left: 3rem;
+        }
 
 
     }
